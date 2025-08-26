@@ -14,7 +14,7 @@ body {
 
 /* Nav Bar */
 nav {
-  background-color: rgb(170, 170, 134);
+  background-color: #1E3A8A;
   display: flex;
   justify-content: space-between;
   align-items: center;
