@@ -61,7 +61,6 @@ nav ul li a:hover {
 }
 
 .hero-content{
-  border: 2px red solid;                  /*-------*/
   position: relative;
   padding: 20px;
 }
@@ -104,7 +103,6 @@ nav ul li a:hover {
   transform: translateX(-50%);
   height: auto;
   width: 50px;
-  border: 2px red solid;           /*-----------*/
 }
 
 .downArrow:hover {
@@ -114,28 +112,43 @@ nav ul li a:hover {
 
 /* About Section */
 .about {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  background: grey;
+  background: #fff;
   position: relative;
   padding: 8vh 3vh;
+  color: black;
+  border-bottom: 3px black solid;
 }
 
-.info-box{
+.top-row1{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.info-box1{
+  padding: 3vh 10vh;
   flex: 1;
-  background-color: #008080;
-  border: 2px red solid;
+  text-align: center;
 }
-
-.about h2 {
+.info-box1 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+.info-box1 p{
+  margin-bottom: 1rem;
+}
+
+.info-box2{
+  padding: 3vh 2vh;
+  flex: 1;
+}
+
+
 
 .about .downArrow {
-  position: absolute;
-  bottom: 20px;    /* stick to bottom */
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
@@ -149,28 +162,109 @@ nav ul li a:hover {
 
 /* Services Section */
 .services {
-  padding: 3rem 2rem;
-  background: #006060;
-  text-align: center;
+  min-height: 100vh;
+  padding: 8vh 2rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
 }
 
+/* Section Heading */
 .services h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  color: black;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10vh;  /* reduced space */
+  font-weight: bold;
 }
 
+/* Service Cards Row */
+.top-row2 {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* even spacing between cards */
+  flex-wrap: wrap; /* responsive stacking on smaller screens */
+  margin-bottom: 10vh;
+  width: 100%;
+  max-width: 1200px; /* keeps it centered and not too wide */
+}
+
+/* Individual Service Box */
 .service-box {
-  background: #009999;
-  padding: 1.5rem;
-  margin: 1rem auto;
-  border-radius: 10px;
-  max-width: 400px;
-  transition: transform 0.3s ease;
+  background: black;
+  padding: 2rem;
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .service-box:hover {
+  transform: translateY(-5px);
+  background-color: #FACC15;
+  color: black;
+}
+
+/* Skills Row */
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.row ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.row ul li {
+  border: 1px black solid;
+  background-color: #FACC15;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.row ul li:hover {
+  background: black;
+  
   transform: scale(1.05);
 }
+
+/* Down Arrow */
+.downArrow {
+  width: 40px;
+  margin-top: 2rem;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+
+/* Simple bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
 
 /* Projects Section */
 .projects {
