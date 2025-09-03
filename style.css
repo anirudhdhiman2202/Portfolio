@@ -7,7 +7,6 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: darkcyan;
   color: #fff;
   line-height: 1.6;
 }
@@ -107,7 +106,7 @@ nav ul li a:hover {
 
 @keyframes bounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(10px); }
+  50% { transform: translateX(-50%) translateY(20px); }
 } 
 
 
