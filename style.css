@@ -278,11 +278,16 @@ nav ul li a:hover {
 }
 
 /* Contact Section */
-.contact {
-  padding: 3rem 2rem;
+/* .contact {
   height: 100vh;
+  padding: 3rem 2rem;
   background: #fff;
   text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 3px black solid;
 }
 
 .contact h2 {
@@ -323,6 +328,94 @@ nav ul li a:hover {
 .contact button:hover {
   background: black;
   color: #fff;
+} */
+
+/* Contact Section */
+#contact {
+  height: 100vh;
+  background: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#contact h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #FACC15;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* Contact Form */
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0, 120, 255, 0.3);
+  outline: none;
+}
+
+/* Textarea Styling */
+#contact textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Button */
+#contact button {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#contact button:hover {
+  color: black;
+  background-color: #FACC15;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #contact {
+    padding: 60px 15px;
+  }
+
+  #contact h2 {
+    font-size: 1.8rem;
+  }
 }
 
 /* Footer */
