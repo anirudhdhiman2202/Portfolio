@@ -467,6 +467,7 @@ footer .socials a:hover {
     flex-direction: column;
     gap: 0.75rem;
     width: 100%;
+    padding: 0.75rem 0;
   }
 
   .menu-toggle {
@@ -476,10 +477,16 @@ footer .socials a:hover {
   /* Hide menu by default on mobile – JS will toggle .open */
   .menu {
     display: none;
+    /* Make sure dropdown has dark background instead of blending with white hero */
+    background-color: black;
   }
 
   .menu.open {
     display: flex;
+    /* Stack links in a vertical dropdown on mobile */
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
   }
 
   nav {
