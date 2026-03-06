@@ -52,11 +52,20 @@ nav ul li a:hover {
 /* Mobile hamburger button – hidden on desktop, visible on small screens */
 .menu-toggle {
   display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
+  background: transparent;
+  border: 1px solid #FACC15;
+  color: #FACC15;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+/* Text label inside the hamburger button */
+.menu-label {
+  margin-right: 0.25rem;
+  font-size: 0.95rem;
 }
 
 /* Hero Section */
