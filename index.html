@@ -12,7 +12,13 @@
 
   <!-- Navigation Bar -->
   <nav>
+    <!-- Logo / site name -->
     <h2 class="logo">Portfolio</h2>
+    <!-- Mobile hamburger button (shown only on smaller screens) -->
+    <button class="menu-toggle" aria-label="Toggle navigation menu">
+      ☰
+    </button>
+    <!-- Main navigation links -->
     <ul class="menu">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -24,6 +30,7 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
+    <!-- Intro text and primary call‑to‑action -->
     <div class="hero-content">
       <h1>Hi, I'm Anirudh 👋</h1>
       <p>A passionate Software Developer dedicated to building scalable, efficient, and user-friendly web applications.
@@ -48,12 +55,14 @@
 
 
     <a href="#about">
+    <!-- Scroll down indicator -->
     <img src="Images/down-arrow-svgrepo-com.png" alt="Arrow-Img" class="downArrow"></a>
   </section>
 
   <!-- About Section -->
   <section id="about" class="about">
     <div class="top-row1">
+      <!-- About text column -->
       <div class="info-box1">
         <h2>About Me</h2>
         <p>
@@ -72,6 +81,7 @@
             If I had to sum myself up: I love creating, learning, and making an impact through code.
             </p>
       </div>
+      <!-- Right column reserved for visual / ads -->
       <div class="info-box2">
           <!-- AdSense Ad Unit -->
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6931227561242076"
@@ -97,24 +107,27 @@
 
   <!-- Services Section -->
   <section id="services" class="services">
-      
-        <h2>Services</h2>
-      
+      <!-- Section heading -->
+      <h2>Services</h2>
       <div class="top-row2">
+        <!-- Service card 1 -->
         <div class="service-box">
           <h3>🌐 Web Development</h3>
           <p>I create modern and responsive websites tailored to your needs.</p>
         </div>
+        <!-- Service card 2 -->
         <div class="service-box">
           <h3>📱 Mobile Apps</h3>
           <p>Building Android and iOS apps that deliver a smooth user experience.</p>
         </div>
+        <!-- Service card 3 -->
         <div class="service-box">
           <h3>⚙️ Custom Solutions</h3>
           <p>From automation scripts to custom tools — I can build what you need.</p>
         </div>
       </div>
 
+      <!-- Skill tags row -->
       <div class="row">
         <ul>
           <li>HTML</li>
@@ -149,6 +162,7 @@
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
+    <!-- Section heading -->
     <h2>Projects</h2>
 
 
@@ -166,14 +180,17 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
+    <!-- Project 1 -->
     <div class="project-card">
       <h3>Portfolio Website</h3>
       <p>A personal website to showcase my skills and work.</p>
     </div>
+    <!-- Project 2 -->
     <div class="project-card">
       <h3>E-commerce App</h3>
       <p>Developed a full-stack online store with payment integration.</p>
     </div>
+    <!-- Project 3 -->
     <div class="project-card">
       <h3>Full-Stack Website for StartUp</h3>
       <p>Developed a full-stack Website Globsist.com with payment integration.</p>
@@ -186,7 +203,9 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
+    <!-- Contact heading -->
     <h2>Contact Me</h2>
+    <!-- Contact form that sends data to SheetDB -->
     <form id ="sheetdb-form" action="https://sheetdb.io/api/v1/ygkjy8bh6b2sq" method="post">
       <input type="text" name="data[Name]" placeholder="Full Name" required>
       <input type="email" name="data[Email]" placeholder="Email Address" required>
@@ -206,7 +225,8 @@
     </div>
   </footer>
 
-  <Script src="script.js"></Script>
+  <!-- JavaScript for form handling and interactions -->
+  <script src="script.js"></script>
 
 </body>
 </html>

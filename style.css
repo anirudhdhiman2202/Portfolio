@@ -1,4 +1,4 @@
-/* Reset */
+/* Basic reset so all browsers start from the same base */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +9,8 @@ body {
   font-family: Arial, sans-serif;
   color: #fff;
   line-height: 1.6;
+  /* Subtle dark gradient background behind all sections */
+  background: radial-gradient(circle at top left, #111827, #020617 45%, #000000 100%);
 }
 
 /* Nav Bar */
@@ -46,6 +48,17 @@ nav ul li a {
 nav ul li a:hover {
   color: #FACC15;
 }
+
+/* Mobile hamburger button – hidden on desktop, visible on small screens */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 /* Hero Section */
 .hero {
   display: flex;
@@ -94,7 +107,7 @@ nav ul li a:hover {
   background: black;
   color: #fff;
 }
-/*Arrow For Scrolling*/
+/* Arrow icon that nudges users to scroll down */
 .downArrow{
   position: absolute;
   bottom: 10px;
@@ -245,7 +258,7 @@ nav ul li a:hover {
 
 /* Projects Section */
 .projects {
-  height: 100vh;
+  min-height: 100vh;
   padding: 3rem 2rem;
   background: #fff;
   text-align: center;
@@ -407,7 +420,7 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* Responsive */
+/* Contact Section – Responsive */
 @media (max-width: 600px) {
   #contact {
     padding: 60px 15px;
@@ -438,18 +451,75 @@ footer .socials a:hover {
   color: darkcyan;
 }
 
-/* Responsive */
+/* Global responsive tweaks */
 @media (max-width: 768px) {
+  /* Stack nav items vertically and show the hamburger */
   nav ul {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    width: 100%;
   }
 
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide menu by default on mobile – JS will toggle .open */
+  .menu {
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  /* Slightly smaller hero text on phones/tablets */
   .hero h1 {
     font-size: 2rem;
   }
 
   .hero p {
     font-size: 1rem;
+  }
+
+  /* Keep hero content comfortable on tall phones */
+  .hero {
+    height: auto;
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  /* Stack about section columns one on top of another */
+  .about {
+    padding: 6vh 2vh;
+  }
+
+  .top-row1 {
+    flex-direction: column;
+  }
+
+  .info-box1 {
+    padding: 2vh 2vh;
+  }
+
+  .info-box2 img {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  /* Services cards take full width on very small screens */
+  .services {
+    padding: 6vh 1.5rem;
+  }
+
+  .service-box {
+    min-width: 100%;
+  }
+
+  .projects {
+    padding: 4rem 1.5rem 3rem;
   }
 }
